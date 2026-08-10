@@ -4,7 +4,7 @@
 // Ganti nomor berikut dengan nomor WhatsApp penjual.
 // Format: kode negara + nomor, tanpa tanda +, spasi, atau 0 di depan.
 // Contoh Indonesia: 628123456789
-const nomorWhatsApp = "628123456789";
+const nomorWhatsApp = "6281382319039";
 
 const pesanWhatsApp =
   "Halo, saya tertarik dengan properti kos-kosan 7 kamar + rumah tinggal 4 kamar di Pondok Labu, Cilandak, Jakarta Selatan. Saya ingin mendapatkan informasi lebih lengkap dan jadwal survey.";
