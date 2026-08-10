@@ -1,9 +1,6 @@
 // ===============================
 // PENGATURAN WEBSITE
 // ===============================
-// Ganti nomor berikut dengan nomor WhatsApp penjual.
-// Format: kode negara + nomor, tanpa tanda +, spasi, atau 0 di depan.
-// Contoh Indonesia: 628123456789
 const nomorWhatsApp = "6281382319039";
 
 const pesanWhatsApp =
@@ -15,8 +12,36 @@ const linkWhatsApp =
 document.getElementById("waButton").href = linkWhatsApp;
 document.getElementById("stickyWa").href = linkWhatsApp;
 
-// Animasi sederhana ketika elemen masuk layar
-const cards = document.querySelectorAll(".detail-card, .gallery > div, .benefit-list div");
+// Lazy-load video: file video baru dipasang ke <source>
+// ketika elemen mendekati viewport. Ini membantu menghemat bandwidth.
+const lazyVideos = document.querySelectorAll(".lazy-video");
+
+const videoObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    const video = entry.target;
+    const source = video.querySelector("source");
+    const src = video.dataset.src;
+
+    if (src && source && !source.src) {
+      source.src = src;
+      video.load();
+    }
+
+    observer.unobserve(video);
+  });
+}, {
+  rootMargin: "300px 0px",
+  threshold: 0.01
+});
+
+lazyVideos.forEach(video => videoObserver.observe(video));
+
+// Animasi elemen ketika masuk layar
+const cards = document.querySelectorAll(
+  ".detail-card, .gallery > div, .benefit-list div, .video-card"
+);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
