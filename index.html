@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -27,21 +28,25 @@
 
   <main>
     <section class="hero" id="home">
+      <picture class="hero-media">
+        <source srcset="images/hero.webp" type="image/webp">
+        <img src="images/hero.jpg" alt="Rumah dan kos-kosan dijual di Pondok Labu, Cilandak, Jakarta Selatan" fetchpriority="high">
+      </picture>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
-        <span class="eyebrow">PROPERTI INVESTASI • JAKARTA SELATAN</span>
+        <span class="eyebrow"><i class="fa-solid fa-building-circle-check"></i> PROPERTI INVESTASI • JAKARTA SELATAN</span>
         <h1>Kos-Kosan 7 Kamar<br><span>+ Rumah Tinggal 4 Kamar</span></h1>
-        <p class="hero-location">📍 Komplek DDN II, Pondok Labu, Cilandak — Jakarta Selatan</p>
+        <p class="hero-location"><i class="fa-solid fa-location-dot"></i> Komplek DDN II, Pondok Labu, Cilandak — Jakarta Selatan</p>
 
         <div class="price-card">
           <small>HARGA PENAWARAN</small>
           <strong>Rp2,7 Miliar</strong>
-          <span>Masih bisa nego</span>
+          <span><i class="fa-solid fa-handshake"></i> Masih bisa nego</span>
         </div>
 
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="#kontak">Jadwalkan Survey</a>
-          <a class="btn btn-light" href="#detail">Lihat Detail</a>
+          <a class="btn btn-primary" href="#kontak"><i class="fa-brands fa-whatsapp"></i> Jadwalkan Survey</a>
+          <a class="btn btn-light" href="#detail"><i class="fa-solid fa-arrow-down"></i> Lihat Detail</a>
         </div>
       </div>
     </section>
@@ -78,11 +83,62 @@
           <p>Ganti gambar contoh di bawah dengan foto properti Anda.</p>
         </div>
         <div class="gallery">
-          <div class="gallery-main placeholder"><span>FOTO UTAMA PROPERTI</span><small>Tambahkan foto eksterior di images/utama.jpg</small></div>
+          <div class="gallery-main placeholder"><span><i class="fa-solid fa-image"></i> FOTO UTAMA PROPERTI</span><small>images/utama.jpg</small></div>
           <div class="gallery-item placeholder"><span>FOTO 02</span><small>images/foto2.jpg</small></div>
           <div class="gallery-item placeholder"><span>FOTO 03</span><small>images/foto3.jpg</small></div>
           <div class="gallery-item placeholder"><span>FOTO 04</span><small>images/foto4.jpg</small></div>
           <div class="gallery-item placeholder"><span>FOTO 05</span><small>images/foto5.jpg</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label"><i class="fa-solid fa-circle-play"></i> VIDEO PROPERTI</span>
+            <h2>Lihat properti lebih dekat</h2>
+          </div>
+          <p>Enam slot video siap diisi dengan video rumah, kamar kos, lingkungan, dan akses sekitar.</p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <video class="lazy-video" controls preload="none" poster="images/video1-poster.jpg" data-src="videos/video1.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-caption"><i class="fa-solid fa-house"></i><span>Video 1 — Tampak Properti</span></div>
+          </article>
+          <article class="video-card">
+            <video class="lazy-video" controls preload="none" poster="images/video2-poster.jpg" data-src="videos/video2.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-caption"><i class="fa-solid fa-door-open"></i><span>Video 2 — Rumah Tinggal</span></div>
+          </article>
+          <article class="video-card">
+            <video class="lazy-video" controls preload="none" poster="images/video3-poster.jpg" data-src="videos/video3.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-caption"><i class="fa-solid fa-bed"></i><span>Video 3 — Kamar Kos</span></div>
+          </article>
+          <article class="video-card">
+            <video class="lazy-video" controls preload="none" poster="images/video4-poster.jpg" data-src="videos/video4.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-caption"><i class="fa-solid fa-bath"></i><span>Video 4 — Fasilitas</span></div>
+          </article>
+          <article class="video-card">
+            <video class="lazy-video" controls preload="none" poster="images/video5-poster.jpg" data-src="videos/video5.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-caption"><i class="fa-solid fa-road"></i><span>Video 5 — Lingkungan & Akses</span></div>
+          </article>
+          <article class="video-card">
+            <video class="lazy-video" controls preload="none" poster="images/video6-poster.jpg" data-src="videos/video6.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-caption"><i class="fa-solid fa-city"></i><span>Video 6 — Area Sekitar</span></div>
+          </article>
         </div>
       </div>
     </section>
@@ -96,7 +152,7 @@
 
         <div class="detail-grid">
           <article class="detail-card">
-            <div class="icon">🏠</div>
+            <div class="icon"><i class="fa-solid fa-house"></i></div>
             <h3>Bangunan</h3>
             <ul>
               <li>Bangunan baru</li>
@@ -108,7 +164,7 @@
           </article>
 
           <article class="detail-card featured">
-            <div class="icon">🛏️</div>
+            <div class="icon"><i class="fa-solid fa-bed"></i></div>
             <h3>Rumah Tinggal</h3>
             <ul>
               <li>Lantai 1</li>
@@ -119,7 +175,7 @@
           </article>
 
           <article class="detail-card">
-            <div class="icon">🔑</div>
+            <div class="icon"><i class="fa-solid fa-key"></i></div>
             <h3>Kos-Kosan</h3>
             <ul>
               <li>Lantai 2</li>
@@ -130,7 +186,7 @@
           </article>
 
           <article class="detail-card">
-            <div class="icon">📑</div>
+            <div class="icon"><i class="fa-solid fa-file-shield"></i></div>
             <h3>Legalitas</h3>
             <ul>
               <li>SHM pribadi</li>
@@ -160,7 +216,7 @@
           </div>
         </div>
         <div class="map-box">
-          <div class="map-pin">📍</div>
+          <div class="map-pin"><i class="fa-solid fa-location-dot"></i></div>
           <h3>Komplek DDN II</h3>
           <p>Pondok Labu, Cilandak<br>Jakarta Selatan</p>
           <a href="https://www.google.com/maps/search/?api=1&query=Komplek+DDN+II+Pondok+Labu+Cilandak+Jakarta+Selatan" target="_blank" rel="noopener">Buka Google Maps →</a>
@@ -193,7 +249,7 @@
         <span class="section-label">TERTARIK?</span>
         <h2>Jadwalkan survey properti</h2>
         <p>Hubungi penjual untuk mendapatkan informasi lebih lengkap, harga nego, dan jadwal kunjungan.</p>
-        <a class="btn btn-primary large" id="waButton" href="#" target="_blank" rel="noopener">💬 Chat WhatsApp Penjual</a>
+        <a class="btn btn-primary large" id="waButton" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Penjual</a>
         <small class="contact-note">Nomor WhatsApp dapat diubah di file <code>script.js</code>.</small>
       </div>
     </section>
@@ -207,9 +263,9 @@
   </footer>
 
   <div class="sticky-wa">
-    <a id="stickyWa" href="#" target="_blank" rel="noopener">💬 Tanya Properti via WhatsApp</a>
+    <a id="stickyWa" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Tanya Properti via WhatsApp</a>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
